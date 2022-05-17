@@ -1,0 +1,89 @@
+/*
+ * Style sheet for the TSE tutorial.  You shouldn't have to modify this file, but feel free to play
+ * around with colors, fonts, etc.
+ */
+body {
+  font-family: Optimo-Plain,Helvetica Neue,Helvetica,Arial,sans-serif;
+  text-after-overflow: center;
+  background-color: white;
+  color: #1d232f;
+}
+
+h1 {
+  text-align: center;
+}
+
+#div-nav-links {
+  display: inline;
+}
+
+ul {
+  list-style: none;
+  color: white;
+  background-color: black;
+  padding: 8px;
+}
+
+#ul-nav-links li {
+  display: inline;
+}
+
+#ul-nav-links li:hover {
+  color: black;
+  font-style: italic;
+  background-color: white;
+}
+
+#embed {
+  margin-left: 0;
+  display: block;
+  width: 100vw;
+  height: 90vw;
+  /* background-color: #EAEDF2; */
+  background-color: white;
+}
+
+/* Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 90vw;  /* Most of the width */
+    height: 50vh;
+    /* overflow: auto; */ /* Enable scroll if needed */
+    padding-left: 5vw;
+}
+
+/* Modal content/box */
+.modal-content {
+    background-color: #fefefe;
+    overflow: auto; /* Enable scroll if needed */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    height: 50vh;
+}
+
+#modal-data-content {
+    align-content: center;
+    height: 45vh;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
