@@ -4,8 +4,9 @@ import {
   AuthType,
 } from 'https://unpkg.com/@thoughtspot/visual-embed-sdk/dist/tsembed.es.js';
 
-// 1) - Set the tsURL to point to your ThoughtSpot instance.  The default is the trial server.
-const tsURL = "https://try.thoughtspot.cloud";
+// 1) - Set the tsURL to point to your ThoughtSpot instance.
+// If you are using the free trial the URL will be like the following:
+const tsURL = "https://myx.thoughtspot.cloud";
 
 /** Initializes the application with ThoughtSpot. */
 const loadApp = () => {
