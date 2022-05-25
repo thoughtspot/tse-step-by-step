@@ -2,7 +2,7 @@
 
 ## Pre-conditions
 
-You should also have a ThoughtSpot account with TSE enabled.  If you didn't already create an account, you can create a [trial account](https://www.thoughtspot.com/trial) that's good for 30 days and has TSE enabled.  
+You should also have a ThoughtSpot developer account with TSE enabled.  If you didn't already create an account, you can create a [trial account](https://www.thoughtspot.com/trial) that's good for 30 days and has TSE enabled.  
 
 You will also need the following:
 
