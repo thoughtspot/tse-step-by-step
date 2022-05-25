@@ -23,5 +23,5 @@ Ideally you will have some experience with HTML and Javascript, but it's not req
 
 | Lesson                                                                    | Description                                                                                                                                |
 |---------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| [Lesson 1 - Introduction to TSE](lesson-1-intro-to-tse/README-01.md)      | This lesson provides an overall introduction to what TSE is and why you would want to use it.                                              |
+| [Lesson 1 - Introduction to TSE](lesson-01-intro-to-tse/README-01.md)     | This lesson provides an overall introduction to what TSE is and why you would want to use it.                                              |
 | [Lesson 2 - Setting up for the course](lesson-02-setting-up/README-02.md) | This lesson is all about getting set up and ready to code.  You'll download the code and review the resources and tools that will be used. |
