@@ -6,6 +6,7 @@ You should also have a ThoughtSpot account with TSE enabled.  If you didn't alre
 
 You will also need the following:
 
+* A modern web browser.  We'll use Chrome in the examples, but you should be able to use other browsers like Safari or Edge.
 * A text editor for editing code.  You can use any text editor, but an IDE that support HTML, CSS, and Javascript will work better.  The examples in this course use PyCharm, a popular IDE for Python and web development.
 * A web server to run the code.  You can use any web server that will serve static content.  The examples will use the Python3 [http.server](https://docs.python.org/3/library/http.server.html) which is a lightweight server userful for development.
 
