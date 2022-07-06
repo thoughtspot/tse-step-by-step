@@ -1,5 +1,12 @@
 # Lesson 2: Setting up for the course
 
+In this lesson we'll go through the requirements to set up for the course. By the end, you should be in a position to be able to do the future lessons and exercises.   Specific topics include:
+
+* The pre-conditions that need to be satisfied.
+* Review the TSE documentation.
+* Gain familiarity with the Developer Playground.
+* Downloading the starter code.
+
 ## Pre-conditions
 
 You should also have a ThoughtSpot developer account with TSE enabled.  If you didn't already create an account, you can create a [trial account](https://www.thoughtspot.com/trial) that's good for 30 days and has TSE enabled.  
