@@ -21,7 +21,9 @@ Ideally you will have some experience with HTML and Javascript, but it's not req
 
 ## Lessons
 
-| Lesson                                                                    | Description                                                                                                                                |
-|---------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| [Lesson 1 - Introduction to TSE](lesson-01-intro-to-tse/README-01.md)     | This lesson provides an overall introduction to what TSE is and why you would want to use it.                                              |
-| [Lesson 2 - Setting up for the course](lesson-02-setting-up/README-02.md) | This lesson is all about getting set up and ready to code.  You'll download the code and review the resources and tools that will be used. |
+| Lesson                                                                    | Description                                                                                                                                                               |
+|---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Lesson 1 - Introduction to TSE](lesson-01-intro-to-tse/README-01.md)     | This lesson provides an overall introduction to what TSE is and why you would want to use it.                                                                             |
+| [Lesson 2 - Setting up for the course](lesson-02-setting-up/README-02.md) | This lesson is all about getting set up and ready to code.  You'll download the code and review the resources and tools that will be used.                                |
+| [Lesson 3 - Security Setting](lesson-03-security-setup/README-03.md)      | In this lesson we'll talk about the security settings and considerations you need for embedding.                                                                          |
+| [Lesson 4 - Start Coding](lesson-04-start-coding/README-04.md)            | We're ready to start coding.  In this lesson we'll set up the starter code, review the files we're working with and start the web server to verify everything is working. |
