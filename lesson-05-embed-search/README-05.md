@@ -1,144 +1,177 @@
-# Lesson 4 - Start Coding
+# Lesson 5 - Start Coding
 
-Now that we've got everything (hopefully) set up, it's time to dig into the code we'll be modifying.  In this lesson well create a copy of the code so we can modify it, take a look at the files, and then start the web server to make sure everything is working fine.
+At this point we are ready to start embedding ThoughtSpot content.  In this lesson we'll initialize the SDK and embed a search page.  To make it quick and easy, we'll use the developer's playground to generate the code and then update our HTML and JS files to use the generated code.
 
 ## Pre-Conditions
 
-You should have done the activities in the previous lessons.  In particular:
-* Download the GitHub source code.
-* Have a ThoughtSpot account with Developer privileges.
-* Have configured the security settings to be able to embed.
+If you've done the steps in the previous sections, you should have a copy of the code and be able to run it and view the empty application in a web browser.  If not, please revisit previous lessons to get set up.
 
-It's at this point you'll also need an editor such as an IDE or a text editor, ideally one that will support JavaScript and HTML formatting.  The examples here use Sublime Text, a popular text editor, but you can use any editor as long as you can edit text files.
+## Add a nav link and function for the search
 
-## Make a copy of the code
-
-You can work directly in the code you downloaded from GitHub, but it's usually better to create a copy, so you can always revert if you run into problems (or you can just download again).  Which path you chose to take is entirely up to you.  
-
-Which ever approach you take, you should end up with a folder with the files shown below.
-
-![Project files](images/source-files.png)
-
-## Review the main files
-
-We won't go into all of the files yet.  The apis and images folders we can address later in the course.  The three main files for the application are index.html, tse.css, and tse.js.
-
-### index.html
-
-This is a standard HTML page and will serve as the primary page for the application.  We'll just embed everything into the resulting document object model (DOM).  This file will only be used to define the content of the applcation.  The layout and dynamic portions of the application will be done in the CSS and JS files.  
-
-A few sections of this file are worth looking at:
-
-The first section creates a div for a modal box.  The resulting modal will have a x so we can close it.  By default, this modal is going to be hidden.  We'll show and hide it using CSS properties.  It's hidden to start with.
-
-~~~
-<div id="show-data" class="modal">
-    <div class="modal-content">
-        <span id="close-modal" class="close">&times;</span>
-        <div id="modal-data-content"></div>
-    </div>
-</div>
-~~~
-
-The second section of interest is the div for showing navigation links.  We'll add new links
-as we add functionality to the code.  This will be the only updates to the HTML file that we'll do.
+First we want to add a nav link to be able to run the search embed.  In the `index.html` file add a new `<li>` for the search page.  Your code should look like the following.  The link needs to have an ID to add a listener.
 
 ~~~
 <div id="div-nav-links">
-    <ul id="ul-nav-links">
-    </ul>
+  <ul id="ul-nav-links">
+    <li id="search-link">Search</li>  <!-- lesson 05 -->
+  </ul>
 </div>
 ~~~
 
-Possibly the most important section is the div with the `id=embed`.  This div will be used to tell the TSE SDK where to render content.  The ID can be any value, but it must match the ID we use when embedding.  `embed` is common because it matches the ID generated in the Developer Playground.  Note that you can have more than one section for embedding.
+Now run the application and you should see a the Search link show up.  It doesn't do anything yet, but it's always good to test code as we add functionality to find errors quickly.
+
+![Nav bar with search link](images/new-search-link.png)
+
+## Add a listener for the search link
+
+In `tse.js` add the following line of code.  It adds a listener for the click event, so when the user clicks, it will call the `onSearch` function.  You can add it anywhere besides in a function, but I'd recommend before the beginning of the UI functions (see the code comments).
+
+`document.getElementById('search-link').addEventListener('click', onSearch);`
+
+Now we have to add an onSearch function to get called.  After the close of the `loadApp` function, add the following function.  Right now it only shows a comment in the console, but that will tell you that it's being called.
 
 ~~~
-<div id='embed'>
-    <p>This content will be replaced by your embedded content.</p>
-</div>
+const onSearch = () => {
+  console.log('searching');
+}
 ~~~
 
-Finally, we import the `tse.js` file as a Javascript module.  We are using the ES6 version of JavaScript that supports modules.  This version is supported in all modern browsers.  
+Refresh the application and click on the Search link.  You should see a message in the console window of the developer tools.  If not, check for errors.  You can also reference the example code (in the src folder).
+
+![Console output](images/search-console.png)
+
+## Call init
+
+Before we can embed the search, we have to initialize the SDK.  Initializing the SDK tells it the ThoughtSpot instance to talk to and the type of authentication.  There are additional parameters you can pass as well that we won't cover in this session, but you can read about them in the [documentation](https://developers.thoughtspot.com/docs/?pageid=getting-started#initSdk).  
+
+One particular parameter that you should consider is to use the [callPrefetch](https://developers.thoughtspot.com/docs/?pageid=prefetch) parameter and set it to true.  This will make the first embed object load faster since static content has been already cached locally.  Note that this won't do anything if we have caching disabled for development, but it has a big impact in production usage.
+
+For a basic `init` call, the code is simple.  Put this code in the `loadApp` function.  Let's also go ahead and set the embed to tell the user to select a link.  You should end up with something like the following.  In this case `tsURL` refers to the constant defined above, e.g. `const tsURL = "https://myx.thoughtspot.cloud";`.
+
+The final version of loadApp should look like the following.
+~~~
+const loadApp = () => {
+  init({
+    thoughtSpotHost: tsURL,
+    authType: AuthType.None
+  });
+
+  document.getElementById("embed").innerHTML = "<p>Select an option from above.</p>";
+}
+~~~
+
+## Generate a search to embed
+While you _can_ view the documentation and create an embed, it's much easier to use the developer's playground.  For that you'll need to log into ThoughtSpot and select Playground under the Visual Embed SDK section.  You will get a screen that look like the following, but with default values.  We'll set those in a bit.
+
+![img.png](images/playground-search.png)
+
+The playground is made up of three sections:
+
+* On the right is the running embed.  This second shows what the results of the embed will look like in your code.  The area in light grey is the embed area.  
+* On the top left you see an option for selecting components and their properties.  In this case the dropdown is set to Search since we are embedding search.  Beneath that there are different properties that are specific to the search component.
+* Finally, on the bottom left is the actual code that will run.  This code can be edited in ThoughtSpot and will be updated as you change values at the top.  
+
+The sections make up a working environment that will let you generate, modify, and test your embed component before putting them into your application, reducing errors and saving time.
+
+Let's first look at the setting we can set and set a few.  
+* The data source / saved search radio button and dropdown let you select a data source (usually a worksheet) or an already created answer to embed.  The search component is used for both.
+* Below that are sets of checkboxes to enable or disable different features.  As you check the boxes you will see the in the bottom update.  Updates are shown in yellow/orange.  
+
+Let's create the search component we want to embed.
+1. Select a data source from the dropdown.  You should see the code update with the GUID for the data source.  You may notice that it adds a list item.  You can technically add multiple data sources, but the playground only supportes adding one at a time.
+2. Click on the `Collapse data panel`.  This setting causes the data panel to be collapsed rather than showing.  The user can click on the name of the data source and expand it back out if they want.
+3. Click on `Add search tokens`.  You will get code added for the search options.  These options require a TML search string.  The TML search string has a more structured format than search.  In particular, search tokens have brackets.  I've added the following search.  Yours will look similar, but the search string will depend on the source.
+~~~
+searchOptions: {
+  searchTokenString: '[sales] [product type]', //write a TML query
+  //[commit date][revenue]
+  executeSearch: true,
+},
+~~~
+4. Finally, let's restrict some available actions.  Actions are the thing in the menu and icons that a user can click to do something, such as sharing, downloading, etc.  The actions can be controlled by disabling them (greying out, but leaving visible), hiding them (removing from the menu) or specifying those that are visible.  Note that you can specify the ones that are hidden or visible, but not both.  The following example shows disabling the download action and hiding the share action.  If you just start typing `Action.` the editor will give you a list of action values.  
+~~~
+disabledActions: [Action.Download],
+disabledActionReason: "Permission required",
+// visibleActions: [], /* Removes all actions if empty array */
+hiddenActions: [Action.Share],
+/* Use either visibleActions or hiddenActions */
+~~~
+
+Go ahead and hit the run button and you should see a search similar to the image above.  If not, go ahead and make changes.  Remember, you can't break anything and the playground will give you an error message if your embed code isn't correct.
+
+## Embed the search into the application
+
+Now that we've created the embed component using the playground, it's an easy matter to put it into our `onSearch` function.  All components embeds require two steps:
+1. Create the embed object using SearchEmbed, LiveboardEmbed, etc.  
+2. Render the object (with optional event listeners).
+
+The benefit to splitting out the creation of the component from the rendering of the component is that you can create multiple components and then render based on the users behavior, such as selecting a link from a menu.
+
+First copy the following from the playground and paste into the `onSearch` function _after_ the `console.log` statement.  Note that generated comments have been removed.
 
 ~~~
-<script src='tse.js' type='module'></script>
+const embed = new SearchEmbed("#embed", {
+  frameParams: {},
+  collapseDataSources: true,
+  disabledActions: [Action.Download],
+  disabledActionReason: "Permission required",
+  hiddenActions: [Action.Share],
+  dataSources: ["1b1c237d-9de8-4542-bf1f-0c3157ddb8d2"],
+  searchOptions: {
+    searchTokenString: '[sales] [product type]', 
+    executeSearch: true,
+  },
+});
 ~~~
 
-The remainder of the file includes HighCharts links for a custom chart we'll be creating in a later section.
+Now that the component is created, we need to render it.  That just requires the following line of code.  You could copy it from the playground, but the playground adds event listeners that we don't need, so it's easier to just add it.
 
-### tse.css
+`embed.render();`
 
-The CSS file controls the look and feel as well as the layout of the appliation.  We'll also use style modification to show an hide items.  We won't be modifying the CSS file as part of this project, but it's worth looking at the definitions, especially `#embed` and `.modal*` classes.
-
-### tse.js
-
-The final file to look at right now is the one we'll be modifying the most.  `tse.js` contains the application logic that makes the application work.  Initially this file is pretty sparse, but we'll be adding functions to it as we go.  
-
-The first section imports some components from the SDK.  the .es.js at the end indicates it's the version for ES6.  There's also a plain vanilla version without the .es as well as an npm install.
+The completed `onSearch` should look something like the following.
 
 ~~~
-import {
-  init,
-  AuthType,
-} from 'https://unpkg.com/@thoughtspot/visual-embed-sdk/dist/tsembed.es.js';
+const onSearch = () => {
+  console.log('searching');
+  
+  const embed = new SearchEmbed("#embed", {
+    frameParams: {},
+    collapseDataSources: true,
+    disabledActions: [Action.Download],
+    disabledActionReason: "Permission required",
+    hiddenActions: [Action.Share],
+    dataSources: ["1b1c237d-9de8-4542-bf1f-0c3157ddb8d2"],
+    searchOptions: {
+      searchTokenString: '[sales] [product type]', 
+      executeSearch: true,
+    },
+  });
+  
+  embed.render();
+}
 ~~~
 
-The next section defines the `tsURL` to indicate the server you are connecting to.  It's not technically required, but it avoids hard coding the value everywhere it's needed.  You should change this to be the value of the ThoughtSpot server you are using.
+## Test search embed
 
-`const tsURL = "https://myx.thoughtspot.cloud";`
+The last step is to test the embedded search.  Simply refresh the application (with cache disabled), then click the Search link and you should see something like the following:
 
-The next section of code, the `loadApp` function will be called when the window is loaded (see the last line of the file).  This is where we'll put the initialization code for the application.  
+![img.png](images/search-embed.png)
 
-Finally, there are help functions that will be used to clear content and close the modal box.  These will be used as we build the application.
+## A note on loading times
 
-## Start the Web Server
-
-Now that we've reviewed the relevant files, it's time to start the web server and make sure everything is working.  You can use any web server, but in this course, we'll the `http.server` module from Python 3.  
-
-You must run this command in the folder where the code is location.  
-
-You'll just type the command below depending on your version of Python and your environment.  Most (but not all) systems now have Python 3 by default, but the following almost always work.
-
-Windows:  `python -m http.server 8000`
-Mac and Linux: `python3 -m http.server 8000`
-
-Your environment may be different.  If you get an error saying the module isn't found, then you should run `python --version` and verify you are using a Python3 version.
-
-The following image shows my environment.  
-
-1. I'm in the ~/Downloads/tse-step-by-step folder, which is where I put the copy of the starting source code.  
-2. You can see (from the `ls`) that I'm in the folder with the code.  
-3. Next, I checked my version of Python (3.8.2), which means I can just use the `python` command. 
-4. Finally, I started the web server on port 8000 and I get a message that it's running.  You don't have to use port 8000, but make sure the correct port is set in the security settings discussed in [Lesson 3](/lesson-03-security-setup/README-03.md)
-
-![Web server startup image](images/web-server-start.png)
-
-## View the page in the browser
-
-Finally, let's make sure the page can load.  Open your web browser (examples are all in Chrome) and go to `http://localhost:8000`.  You should see something like the image below.  If you see a list of files, it usually means you started the webapp in the wrong folder.
-
-![Initial web app](images/initial-app.png)
-
-## Open dev tools and disable the cache
-
-Finally, you should open the developer tools in your browser.  From Chrome you can open from the menu item for View -> Developer -> Developer Tools.  There are also shortcuts for different operating systems.  
-
-![Open developer tools](images/open-dev-tools.png)
-
-You should see a panel like the following, though yours may be on a different tab.  For me it opened in the Console view, where you can see errors, warnings, and general info messages.
-
-![Developer tools console](images/dev-tools-console.png)
-
-From there, you should open the Network tab and make sure the `Disable cache` box is checked.  Failure to do this step may cause you to not see updates to your code as you make them.  You need to keep the developer tool window open, though you can make it smaller and move it. 
-
-![Developer tools network tab](images/dev-tools-network.png)
-
-At this point, you should be ready to start adding content.
+You will likely notice that the search takes a long time to render.  The initial rendering will re-download the ThoughtSpot content from ThoughtSpot.  This delay can be significantly sped up by using `callPrefetch: true` in the `init` method.  But it won't work for development because we have disabled the cache.
 
 ## Activities
 
-1. Make a copy of the code in a new folder where you will do your work.
-2. Modify the tsURL value to be the URL for your ThoughtSpot instance.
-3. Start the web server.
-4. Open the application in a browser.
-5. Open the developer tools and disable the cache.
+1. Add the nav link and handler to your code
+2. Add the init method (copy from playground or just write)
+3. Use the playground to create an embed component
+4. Copy the search embed component
+5. Test the code
+
+If you run into problems, you can look at the code in the `src` folder in this section.
+
+## Files changed
+
+* index.html
+* tse.js
