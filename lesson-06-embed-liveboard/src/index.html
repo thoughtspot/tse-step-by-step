@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'/>
+    <title>TS Everywhere</title>
+    <link rel='icon' href='images/TS.png' />
+    <link rel='stylesheet' href='tse.css' />
+</head>
+<body>
+    <h1>ThoughtSpot Everywhere: Step-by-Step</h1>
+    <!-- The following is for a modal section that will show pop-up content. -->
+    <div id="show-data" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <div id="modal-data-content"></div>
+        </div>
+    </div>
+    <!-- header links.  You'll add additional links here as you add functionality. -->
+    <div id="div-nav-links">
+        <ul id="ul-nav-links">
+          <li id="search-link">Search</li>
+          <li id="liveboard-link">Liveboard</li>
+          <li id="visualization-link">Visualization</li>
+        </ul>
+    </div>
+    <div id='embed'>
+        <p>This content will be replaced by your embedded content.</p>
+    </div>
+    <script src='tse.js' type='module'></script>
+    <!-- includes for HighCharts that are used in a later lesson. -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</body>
+</html>
