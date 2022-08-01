@@ -100,3 +100,5 @@ See the [documentation](https://developers.thoughtspot.com/docs/?pageid=trusted-
 1. Review the [documentation](https://developers.thoughtspot.com/docs/?pageid=security-settings) for security settings.
 2. Review the documentation for authentication ([SAML SSO](https://developers.thoughtspot.com/docs/?pageid=saml-sso), [OIDC](https://developers.thoughtspot.com/docs/?pageid=oidc-auth), [Trusted Authentication](https://developers.thoughtspot.com/docs/?pageid=trusted-auth)).
 3. Set (or have set) the appropriate settings for your environment unless you are using the ThoughtSpot trial.
+
+[< prev](../lesson-02-setting-up/README-02.md) | [next >](../lesson-04-start-coding/README-04.md)

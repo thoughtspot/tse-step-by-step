@@ -183,3 +183,5 @@ If you run into problems, you can look at the code in the `src` folder in this s
 
 * index.html
 * tse.js
+
+[< prev](../lesson-05-embed-search/README-05.md) | [next >](../lesson-07-embed-full-app/README-07.md)

@@ -49,3 +49,5 @@ Before beginning, you should download the code from GitHub.  The recommended app
 2. Log in as a Developer and explore the Develop tab.
 3. Open the Visual Embed SDK Playground and modify content and run the resulting code to become familiar with the code. 
 4. Download the code or clone the repository.  
+
+[< prev](../lesson-01-intro-to-tse/README-01.md) | [next >](../lesson-03-security-setup/README-03.md)

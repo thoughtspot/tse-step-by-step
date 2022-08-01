@@ -142,3 +142,5 @@ At this point, you should be ready to start adding content.
 3. Start the web server.
 4. Open the application in a browser.
 5. Open the developer tools and disable the cache.
+
+[< prev](../lesson-03-security-setup/README-03.md) | [next >](../lesson-05-embed-search/README-05.md)
