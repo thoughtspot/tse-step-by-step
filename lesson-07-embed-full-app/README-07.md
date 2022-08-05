@@ -5,9 +5,9 @@ In this lesson we'll embed the ThoughtSpot application.  In this case, we'll be 
 
 ## Pre-Conditions
 
-It's ideal if you've done all of the lessons so far.  You minimally will need to have set up the environment and code and have an `init` method working (see [lesson 06](../lesson-06-embed-liveboard/README-06.md)).
+It's ideal if you've done all the lessons so far.  You minimally will need to have set up the environment and code and have an `init` method working (see [lesson 06](../lesson-06-embed-liveboard/README-06.md)).
 
-## Add a nav link and function for the search
+## Add a nav link and function for the full app
 
 First we want to add two nav links to the nav bar.  In the `index.html` file add a new `<li>` for the application.  Your code should look like the following.  The link needs to have an ID to add a listener.
 
@@ -63,7 +63,7 @@ import {
 
 ## Generate an application embed
 
-The same way you created other components in the playground, we'll create an app mbed.  Navigate to the visual embed SDK playground and select "Full App" from the dropdown on the top left.  You should see something like the following. By default the Home page is shown. 
+The same way you created other components in the playground, we'll create an app embed.  Navigate to the visual embed SDK playground and select "Full App" from the dropdown on the top left.  You should see something like the following. By default, the Home page is shown. 
 
 ![Default application page](images/default-app-playground.png)
 

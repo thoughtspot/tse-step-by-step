@@ -18,7 +18,7 @@ First we want to add a nav link to be able to run the search embed.  In the `ind
 </div>
 ~~~
 
-Now run the application and you should see a the Search link show up.  It doesn't do anything yet, but it's always good to test code as we add functionality to find errors quickly.
+Now run the application, and you should see the Search link show up.  It doesn't do anything yet, but it's always good to test code as we add functionality to find errors quickly.
 
 ![Nav bar with search link](images/new-search-link.png)
 
@@ -78,7 +78,7 @@ Let's first look at the setting we can set and set a few.
 * Below that are sets of checkboxes to enable or disable different features.  As you check the boxes you will see the in the bottom update.  Updates are shown in yellow/orange.  
 
 Let's create the search component we want to embed.
-1. Select a data source from the dropdown.  You should see the code update with the GUID for the data source.  You may notice that it adds a list item.  You can technically add multiple data sources, but the playground only supportes adding one at a time.
+1. Select a data source from the dropdown.  You should see the code update with the GUID for the data source.  You may notice that it adds a list item.  You can technically add multiple data sources, but the playground only supports adding one at a time.
 2. Click on the `Collapse data panel`.  This setting causes the data panel to be collapsed rather than showing.  The user can click on the name of the data source and expand it back out if they want.
 3. Click on `Add search tokens`.  You will get code added for the search options.  These options require a TML search string.  The TML search string has a more structured format than search.  In particular, search tokens have brackets.  I've added the following search.  Yours will look similar, but the search string will depend on the source.
 ~~~
@@ -97,15 +97,15 @@ hiddenActions: [Action.Share],
 /* Use either visibleActions or hiddenActions */
 ~~~
 
-Go ahead and hit the run button and you should see a search similar to the image above.  If not, go ahead and make changes.  Remember, you can't break anything and the playground will give you an error message if your embed code isn't correct.
+Go ahead and hit the run button, and you should see a search similar to the image above.  If not, go ahead and make changes.  Remember, you can't break anything and the playground will give you an error message if your embed code isn't correct.
 
 ## Embed the search into the application
 
-Now that we've created the embed component using the playground, it's an easy matter to put it into our `onSearch` function.  All components embeds require two steps:
+Now that we've created the embed component using the playground, it's an easy matter to put it into our `onSearch` function.  All embed components require two steps:
 1. Create the embed object using SearchEmbed, LiveboardEmbed, etc.  
 2. Render the object (with optional event listeners).
 
-The benefit to splitting out the creation of the component from the rendering of the component is that you can create multiple components and then render based on the users behavior, such as selecting a link from a menu.
+The benefit to splitting out the creation of the component from the rendering of the component is that you can create multiple components and then render based on the user's behavior, such as selecting a link from a menu.
 
 First copy the following from the playground and paste into the `onSearch` function _after_ the `console.log` statement.  Note that generated comments have been removed.
 
@@ -153,7 +153,7 @@ const onSearch = () => {
 
 ## Test search embed
 
-The last step is to test the embedded search.  Simply refresh the application (with cache disabled), then click the Search link and you should see something like the following:
+The last step is to test the embedded search.  Simply refresh the application (with cache disabled), then click the Search link, and you should see something like the following:
 
 ![img.png](images/search-embed.png)
 
@@ -164,10 +164,11 @@ You will likely notice that the search takes a long time to render.  The initial
 ## Activities
 
 1. Add the nav link and handler to your code
-2. Add the init method (copy from playground or just write)
-3. Use the playground to create an embed component
-4. Copy the search embed component
-5. Test the code
+2. Import the SearchEmbed, Action, and EmbedEvent components to the import section
+3. Add the init method (copy from playground or just write)
+4. Use the playground to create an embed component
+5. Copy the search embed component
+6. Test the code
 
 If you run into problems, you can look at the code in the `src` folder in this section.
 

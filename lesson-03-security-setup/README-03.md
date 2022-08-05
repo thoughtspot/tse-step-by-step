@@ -4,18 +4,18 @@ TSE applications operate securely with ThoughtSpot.  This lesson will walk you t
 
 ## Pre-conditions
 
-You should already have completed to the settings for [Lesson 2 - Setting up for the course](/lesson-02-setting-up/README-02.md).  In addition, to change the security settings in ThoughtSpot you need to be an administrator or have an administrator to set the proper settings.  If you are using the training environment, these settings are already set for most environments.
+You should have already completed the settings in [Lesson 2 - Setting up for the course](/lesson-02-setting-up/README-02.md).  In addition, to change the security settings in ThoughtSpot you need to be an administrator or have an administrator to set the proper settings.  If you are using the training environment, these settings are already set for most environments.
 
 ## Types of Security
 
-Security is applied to web application in many different ways.  In the case of TSE, there are some that are TSE specific and some that are ThoughtSpot specific.  This lesson focuses on the TSE specific security, but we'll describe all types before getting into the details.
+Security is applied to web applications in many ways.  In the case of TSE, there are some that are TSE specific and some that are ThoughtSpot specific.  This lesson focuses on the TSE specific security, but we'll describe all types before getting into the details.
 
 Security when using ThoughtSpot and TSE can be thought of in the following buckets that work together to apply end-to-end content and data security.  Each type of security is identified below with where the security is managed (TSE or ThoughtSpot).  
 
 * (TSE) Embed / web security are the security settings that allow you to embed ThoughtSpot into your application.
 * (TSE and ThoughtSpot) Authentication determines how you will authenticate the user with ThoughtSpot.  Both the authentication supported by ThoughtSpot and TSE have to be considered.
 * (ThoughtSpot) Content security is managed by ThoughtSpot to determine what content a user has access to, such as table, worksheets, and liveboards.  Data security can be controlled separately (see below).
-* (ThoughtSpot) System privileges define what a user can do inside of ThoughtSpot, such as download data or use SpotIQ.
+* (ThoughtSpot) System privileges define what a user can do inside ThoughtSpot, such as download data or use SpotIQ.
 * (ThoughtSpot) Data security that restricts the columns or rows of data from the source data.  Data security is managed via row-level security settings or column sharing in ThoughtSpot.  It can also be controlled using passthrough security to the cloud data warehouse.
 
 ## Embed / Web Security
@@ -28,7 +28,7 @@ Security settings are (mostly) set using the Developer -> Security Settings tab 
 
 ### CSP visual embed hosts
 
-CSP visual embed hosts are the URLs that are permitted to embed ThoughtSpot.  For example, `https://mycoolapp.mycompany.com`.  If you're app URL is not in the list then you will get CSP errors when embedding.  For development, you can add localhost, but it's not recommended for production environments.  You only need a port if you are using a non-standard (e.g. 80, 443) port.  
+CSP visual embed hosts are the URLs that are permitted to embed ThoughtSpot.  For example, `https://mycoolapp.mycompany.com`.  If your app URL is not in the list then you will get CSP errors when embedding.  For development, you can add localhost, but it's not recommended for production environments.  You only need a port if you are using a non-standard (e.g. 80, 443) port.  
 
 ### CSP connect-src domains
 
@@ -44,9 +44,9 @@ For more details, see the [security setting](https://developers.thoughtspot.com/
 
 ## Authentication
 
-Authentication is how users are given access to ThoughtSpot (logged in) and identified in ThoughtSpot.  Before a user can be authenticated, they have to exist in ThoughtSpot and they are usually assigned to some groups.  Typically, this is a separate process, but it is possible if using SAML to create the user and assign to groups when doing the initial authentication.  Other alternatives include manually creating users and using the APIs to create users and groups.  The creation of users and groups is not covered in this course.  
+Authentication is how users are given access to ThoughtSpot (logged in) and identified in ThoughtSpot.  Before a user can be authenticated, they have to exist in ThoughtSpot, and they are usually assigned to some groups.  Typically, this assignment is a separate process, but it is possible if using SAML to create the user and assign them to groups when doing the initial authentication.  Other alternatives include manually creating users and using the APIs to create users and groups.  The creation of users and groups is not covered in this course.  
 
-The following table lists the types of authentication, the associated [enumerated type](https://developers.thoughtspot.com/docs/typedoc/enums/AuthType.html) in the SDK and if they users can be created on demand.  Don't worry about the AuthType right now, but it will be used later when we talk about initializing the SDK.
+The following table lists the types of authentication, the associated [enumerated type](https://developers.thoughtspot.com/docs/typedoc/enums/AuthType.html) in the SDK and if the users can be created on demand.  Don't worry about the AuthType right now, but it will be used later when we talk about initializing the SDK.
 
 | Type                                | [AuthType](https://developers.thoughtspot.com/docs/typedoc/enums/AuthType.html) | Description                      | Can Create? |
 |-------------------------------------|---------------------------------------------------------------------------------|----------------------------------|-------------|
@@ -68,7 +68,7 @@ Basic authentication is traditional username / password authentication.  This ap
 
 ### SSO/SAML Authentication
 
-SAML authentication uses SAML 2.0 to authenticate the use.  With this approach, ThoughtSpot is set up within a federation using a Identify Provider (IdP), such as Okta or something similar.  When the user attempts to view ThoughtSpot content, ThoughtSpot will make a check to the IdP to verify the user is authenticated.  Usually the embedding application is also part of the same federation, so the user is already authenticated.  It's not required, but if the user isn't authenticated, then they will have to authenticate with the IdP. 
+SAML authentication uses SAML 2.0 to authenticate the user.  With this approach, ThoughtSpot is set up within a federation using an Identity Provider (IdP), such as Okta or something similar.  When the user attempts to view ThoughtSpot content, ThoughtSpot will make a check to the IdP to verify the user is authenticated.  Usually the embedding application is also part of the same federation, so the user is already authenticated.  It's not required, but if the user isn't authenticated, then they will have to authenticate with the IdP. 
 
 SAML configuration requires Administrator privileges in ThoughtSpot.  It shows up in the Admin page of the UI.  You will need to provide information about the IdP, including uploading a metadata XML file.  Details on the setting can be found in the [documentation](https://developers.thoughtspot.com/docs/?pageid=saml-sso).  The IdP will have to also be set up to match the ThoughtSpot configuration.  See the IdP's documentation on how to set it up.
 

@@ -8,11 +8,11 @@ In this lesson we'll embed a liveboard and a liveboard visualization.  In the sa
 
 ## Pre-Conditions
 
-It's ideal if you've done all of the lessons so far.  You minimally will need to have set up the environment and code and have an `init` method working (see [lesson 06](../lesson-06-embed-liveboard/README-06.md)).
+It's ideal if you've done all the lessons so far.  You minimally will need to have set up the environment and code and have an `init` method working (see [lesson 06](../lesson-06-embed-liveboard/README-06.md)).
 
-## Add a nav link and function for the search
+## Add a nav link and function for the liveboard and visualization
 
-First we want to add two nav links to the nav bar.  In the `index.html` file add a two new `<li>` for the livboard and visualiation.  Your code should look like the following.  The links needs to have an ID to add a listener.
+First we want to add two nav links to the nav bar.  In the `index.html` file add a two new `<li>` for the liveboard and visualization.  Your code should look like the following.  The links need to have an ID to add a listener.
 
 ~~~
 <div id="div-nav-links">
@@ -24,7 +24,7 @@ First we want to add two nav links to the nav bar.  In the `index.html` file add
 </div>
 ~~~
 
-Now run the application and you should see the new links.  It doesn't do anything yet, but it's always good to test code as we add functionality to find errors quickly.  The UI could use some style work to make it easier to read, but this layout is sufficient to learn TSE.
+Now run the application, and you should see the new links.  It doesn't do anything yet, but it's always good to test code as we add functionality to find errors quickly.  The UI could use some style work to make it easier to read, but this layout is sufficient to learn TSE.
 
 ![Nav bar liveboard links](images/new-liveboard-links.png)
 
@@ -81,7 +81,7 @@ The `LiveboardEmbed` doesn't have a lot of options.  In addition to the Liveboar
 
 Let's create the liveboard component we want to embed.  In this case, you just need to specify a liveboard from the dropdown.  We'll just use the defaults for the other values.
 
-Select a liveboard from the dropdown and you should see a `liveboardId` added to the code.  Click run and you should see your liveboard show up in the right-hand panel.
+Select a liveboard from the dropdown, and you should see a `liveboardId` added to the code.  Click run, and you should see your liveboard show up in the right-hand panel.
 
 ![Liveboard selected in the playground](images/liveboard-selected.png)
 
@@ -96,7 +96,7 @@ const embed = new LiveboardEmbed("#embed", {
 });
 ~~~
 
-Now we just need to render the component so it shows up.  Failure to add this step results in an empty embed area.
+Now we just need to render the component.  Failure to add this step results in an empty embed area.
 
 `embed.render();`
 
@@ -117,7 +117,7 @@ const onLiveboard = () => {
 
 ## Test the liveboard embed
 
-The last step is to test the embedded liveboard.  Simply refresh the application (with cache disabled), then click the `Liveboard` link and you should get something like the following:
+The last step is to test the embedded liveboard.  Simply refresh the application (with cache disabled), then click the `Liveboard` link, and you should get something like the following:
 
 ![Liveboard embed results](images/liveboard-embed-results.png)
 

@@ -1,6 +1,6 @@
 # Lesson 4 - Start Coding
 
-Now that we've got everything (hopefully) set up, it's time to dig into the code we'll be modifying.  In this lesson well create a copy of the code so we can modify it, take a look at the files, and then start the web server to make sure everything is working fine.
+Now that we've got everything (hopefully) set up, it's time to dig into the code we'll be modifying.  In this lesson we'll create a copy of the code, so we can modify it, take a look at the files, and then start the web server to make sure everything is working fine.
 
 ## Pre-Conditions
 
@@ -21,15 +21,15 @@ Which ever approach you take, you should end up with a folder with the files sho
 
 ## Review the main files
 
-We won't go into all of the files yet.  The apis and images folders we can address later in the course.  The three main files for the application are index.html, tse.css, and tse.js.
+We won't go into all the files yet.  The apis and images folders we can address later in the course.  The three main files for the application are index.html, tse.css, and tse.js.
 
 ### index.html
 
-This is a standard HTML page and will serve as the primary page for the application.  We'll just embed everything into the resulting document object model (DOM).  This file will only be used to define the content of the applcation.  The layout and dynamic portions of the application will be done in the CSS and JS files.  
+This is a standard HTML page and will serve as the primary page for the application.  We'll just embed everything into the resulting document object model (DOM).  This file will only be used to define the content of the application.  The layout and dynamic portions of the application will be done in the CSS and JS files.  
 
 A few sections of this file are worth looking at:
 
-The first section creates a div for a modal box.  The resulting modal will have a x so we can close it.  By default, this modal is going to be hidden.  We'll show and hide it using CSS properties.  It's hidden to start with.
+The first section creates a div for a modal box.  The resulting modal will have an x, so we can close it.  By default, this modal is going to be hidden.  We'll show and hide it using CSS properties.  It's hidden to start with.
 
 ~~~
 <div id="show-data" class="modal">
@@ -68,13 +68,13 @@ The remainder of the file includes HighCharts links for a custom chart we'll be 
 
 ### tse.css
 
-The CSS file controls the look and feel as well as the layout of the appliation.  We'll also use style modification to show an hide items.  We won't be modifying the CSS file as part of this project, but it's worth looking at the definitions, especially `#embed` and `.modal*` classes.
+The CSS file controls the look and feel as well as the layout of the application.  We'll also use style modification to show and hide items.  We won't be modifying the CSS file as part of this project, but it's worth looking at the definitions, especially `#embed` and `.modal*` classes.
 
 ### tse.js
 
 The final file to look at right now is the one we'll be modifying the most.  `tse.js` contains the application logic that makes the application work.  Initially this file is pretty sparse, but we'll be adding functions to it as we go.  
 
-The first section imports some components from the SDK.  the .es.js at the end indicates it's the version for ES6.  There's also a plain vanilla version without the .es as well as an npm install.
+The first section imports some components from the SDK.  The .es.js at the end indicates it's the version for ES6.  There's also a plain vanilla version without the .es as well as a npm install.
 
 ~~~
 import {
@@ -93,9 +93,9 @@ Finally, there are help functions that will be used to clear content and close t
 
 ## Start the Web Server
 
-Now that we've reviewed the relevant files, it's time to start the web server and make sure everything is working.  You can use any web server, but in this course, we'll the `http.server` module from Python 3.  
+Now that we've reviewed the relevant files, it's time to start the web server and make sure everything is working.  You can use any web server, but in this course, we'll use the `http.server` module from Python 3.  
 
-You must run this command in the folder where the code is location.  
+You must run this command in the folder where the code is located.  
 
 You'll just type the command below depending on your version of Python and your environment.  Most (but not all) systems now have Python 3 by default, but the following almost always work.
 
@@ -109,7 +109,7 @@ The following image shows my environment.
 1. I'm in the ~/Downloads/tse-step-by-step folder, which is where I put the copy of the starting source code.  
 2. You can see (from the `ls`) that I'm in the folder with the code.  
 3. Next, I checked my version of Python (3.8.2), which means I can just use the `python` command. 
-4. Finally, I started the web server on port 8000 and I get a message that it's running.  You don't have to use port 8000, but make sure the correct port is set in the security settings discussed in [Lesson 3](/lesson-03-security-setup/README-03.md)
+4. Finally, I started the web server on port 8000, and I get a message that it's running.  You don't have to use port 8000, but make sure the correct port is set in the security settings discussed in [Lesson 3](/lesson-03-security-setup/README-03.md)
 
 ![Web server startup image](images/web-server-start.png)
 
@@ -121,11 +121,11 @@ Finally, let's make sure the page can load.  Open your web browser (examples are
 
 ## Open dev tools and disable the cache
 
-Finally, you should open the developer tools in your browser.  From Chrome you can open from the menu item for View -> Developer -> Developer Tools.  There are also shortcuts for different operating systems.  
+Finally, you should open the developer tools in your browser.  From Chrome, you can open from the menu item for View -> Developer -> Developer Tools.  There are also shortcuts for different operating systems.  
 
 ![Open developer tools](images/open-dev-tools.png)
 
-You should see a panel like the following, though yours may be on a different tab.  For me it opened in the Console view, where you can see errors, warnings, and general info messages.
+You should see a panel like the following, though yours may be on a different tab.  For me, it opened in the Console view, where you can see errors, warnings, and general info messages.
 
 ![Developer tools console](images/dev-tools-console.png)
 

@@ -6,14 +6,14 @@ This content is currently being developed with new content coming approximately 
 
 ## Requirements 
 
-This course uses the latest version of ThoughtSpot Cloud (8.0.3) and the visual embed SDK (1.11)
+This course uses the latest version of ThoughtSpot Cloud and the visual embed SDK.  
 
 ## Resources
 
 For this tutorial you will need the following:
 
 * A modern browser.  Chrome is recommended, but not required.  All examples will use Chrome.  
-* Access to ThoughtSpot with TSE enabled.  If you don't have an account, you can create an account at https://try.thoughtspot.cloud/.
+* Access to ThoughtSpot with TSE enabled.  If you don't have an account, you can create an account at https://thoughtspot.com/trial.
 * A web server that will host static web content (.html, .css, .js files).  The examples will use Python3's [`http.server`](https://docs.python.org/3/library/http.server.html) module, but you can use Apache, Tomcat, etc.
 * A basic understanding of ThoughtSpot.  This can be obtained by taking introductory courses.  See the [ThoughtSpot Training site](https://training.thoughtspot.com) for courses you can take to learn the basics.
 

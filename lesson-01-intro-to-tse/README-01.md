@@ -28,6 +28,6 @@ The __Admin__ role, has the same privileges as the Developer, but can also modif
 
 ## Activities
 
-1. If you don't have one, create a [ThoughtSpot Account](https://www.thoughtspot.com/trial?tsref=ts-dev-training).  This account will need Developer (and possibly Admin) privileges.
+1. If you don't have one, create a [ThoughtSpot Account](https://www.thoughtspot.com/trial?tsref=ts-dev-training).  
 
 [next >](../lesson-02-setting-up/README-02.md)
