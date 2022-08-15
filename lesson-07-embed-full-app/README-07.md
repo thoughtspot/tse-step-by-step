@@ -131,4 +131,4 @@ If you run into problems, you can look at the code in the `src` folder in this s
 * index.html
 * tse.js
 
-[< prev](../lesson-06-embed-liveboard/README-06.md)
+[< prev](../lesson-06-embed-liveboard/README-06.md) | [next >](../lesson-05-embed-search/README-05.md)
