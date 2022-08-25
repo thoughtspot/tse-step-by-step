@@ -21,7 +21,7 @@ const arrayify = (valueOrArray) => {
  * @returns {string|*}  The cleaned URL.
  */
 const cleanURL = (url) => {
-  return (url.endsWith("/")) ? url.substr(0, url.length - 1) : url
+  return (url.endsWith("/")) ? url.substring(0, url.length - 1) : url
 }
 
 /*-------------------------------------------------- API wrappers ----------------------------------------------------*/

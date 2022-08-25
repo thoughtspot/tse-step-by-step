@@ -89,4 +89,4 @@ The current plan is to provide an editor and support within the Developer's Play
 
 * None
 
-[< prev](../lesson-07-embed-full-app/README-07.md)
+[< prev](../lesson-07-embed-full-app/README-07.md) | [> next](../lesson-09-code-helpers/README-09.md)
