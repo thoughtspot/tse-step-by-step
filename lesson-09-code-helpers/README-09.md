@@ -128,4 +128,4 @@ The last two functions in this file help work with the tabular data.
 
 * None
 
-[< prev](../lesson-07-embed-full-app/README-07.md)
+[< prev](../lesson-08-style-embedded-thoughtspot/README-08.md) | [next >](../lesson-10-custom-action/README-10.md)
