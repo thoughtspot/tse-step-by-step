@@ -2,7 +2,7 @@
 
 In this lesson we're going to take a look at how you can combine a custom action with the visual embed SDK to add custom capabilities to ThoughtSpot.  We'll first embed a geo visualization from a liveboard.  Then we'll add a context action to pop up a detailed view of data for a given data point (a US State in this case).  This final results will look like the following:
 
-TODO - add the chart with popup.
+![results](images/filter-state-details.png)
 
 ## Pre-Conditions
 
