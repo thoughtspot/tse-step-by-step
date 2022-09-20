@@ -356,4 +356,4 @@ const showDetails = (payload) => {
 * index.html
 * tse.js
 
-[< prev](../lesson-09-code-helpers/README-09.md)
+[< prev](../lesson-09-code-helpers/README-09.md) | [next >](../lesson-11-custom-charts/README-11.md)
