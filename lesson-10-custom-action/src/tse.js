@@ -88,33 +88,36 @@ const onCustomAction = () => {
     liveboardId: "e40c0727-01e6-49db-bb2f-5aa19661477b",
     vizId: "8d2e93ad-cae8-4c8e-a364-e7966a69a41e",
   });
+
   embed
-       .on(EmbedEvent.CustomAction, payload => {
-            if (payload.id === 'show-details') {
-                 showDetails(payload)
-            }
-       })
-      .render();
+    .on(EmbedEvent.CustomAction, payload => {
+      if (payload.id === 'show-details') {
+        showDetails(payload)
+      }
+    })
+    .render();
 }
 
 const showDetails = (payload) => {
+
   const liveboardContextData = LiveboardContextActionData.createFromJSON(payload);
+
   // Only gets the first column value.
   const filter = liveboardContextData.data[liveboardContextData.columnNames[0]];
-
+  // Now show the details with the filter applied in a popup.
   const embed = new LiveboardEmbed("#modal-data-content", {
-    visibleActions: [Action.DrillDown],
-    liveboardId: "e40c0727-01e6-49db-bb2f-5aa19661477b",
+    visibleActions: ["show-details"],
+    pinboardId: "e40c0727-01e6-49db-bb2f-5aa19661477b",
     vizId: "96db6db8-662a-45b5-bc70-00341d75846b",
     runtimeFilters: [{
       columnName: 'state',
       operator: RuntimeFilterOp.EQ,
       values: [filter]
-    }],
-  });
-
+     }],
+   });
   embed.render();
 
+  // display the model box.
   const dataElement = document.getElementById('show-data');
   dataElement.style.display = 'block';
 }

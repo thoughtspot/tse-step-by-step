@@ -152,9 +152,7 @@ Now we need to embed the primary visualization.  In this case, we'll add the sta
 
 ~~~
 const embed = new LiveboardEmbed("#embed", {
-    disabledActions: [],
-    disabledActionReason: "Reason for disabling",
-    visibleActions: ['show-details'], /* Removes all actions if empty array */
+    visibleActions: ['show-details'],
     liveboardId: "e40c0727-01e6-49db-bb2f-5aa19661477b",
     vizId: "8d2e93ad-cae8-4c8e-a364-e7966a69a41e",
 });
