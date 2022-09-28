@@ -56,3 +56,5 @@ If you haven't already, I highly recommend joining the [ThoughtSpot community](h
 ## Developers Portal
 
 The [Developers Portal](https://developers.thoughtspot.com) is the site where customers and non-customers alike can find information about ThoughtSpot.  In particular, you'll find [CodeSpot](https://developers.thoughtspot.com/codespot) on the Developer's portal that has code examples showing how to do different things as well as downloadable examples.  It's another great place to stay informed and involved.
+
+[< prev](../lesson-11-custom-charts/README-11.md)

@@ -198,4 +198,4 @@ Now run refresh in the browser and click on `Custom Charts`.  You should see som
 * index.html
 * tse.js
 
-[< prev](../lesson-10-custom-action/README-10.md)
+[< prev](../lesson-10-custom-action/README-10.md) | [next >](../lesson-12-summary/README-12.md)
