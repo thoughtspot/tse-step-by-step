@@ -9,7 +9,7 @@ If you would also like the video version, you can sign up for the free [ThoughtS
 
 ## Requirements
 
-This course was created using version 8.8.0.cl, so some features may have changed since then.  Please provide feedback in the discussion or issues.  You should be on a more recent version of ThoughtSpot for some of the features.
+This course was created using version 8.8.0.cl, so some features may have changed since then.  Please provide feedback in the discussion or issues.  You should be on a more recent version of ThoughtSpot for some features.
 
 ## Resources
 
@@ -17,7 +17,7 @@ For this tutorial you will need the following:
 
 * A modern browser. Chrome is recommended, but not required. All examples will use Chrome.
 * Access to ThoughtSpot with TSE enabled. If you don't have an account, you can create an account
-  at https://thoughtspot.com/trial.
+  at https://thoughtspot.com/trial?tsref=dev=stepbystep.
 * A web server that will host static web content (.html, .css, .js files). The examples will use
   Python3's [`http.server`](https://docs.python.org/3/library/http.server.html) module, but you can use Apache, Tomcat,
   etc.
