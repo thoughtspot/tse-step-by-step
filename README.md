@@ -1,15 +1,15 @@
-# ThoughtSpot Everywhere step-by-step
+# ThoughtSpot Everywhere Step-by-Step
 
-Welcome to TSE step-by-step, an introduction to ThoughtSpot Everywhere. This is a self-guided course with related video
-content. Each section is broken down into a concrete topic along with instructions on the steps to follow and code
-examples to let you work on the steps yourself.
+Welcome to TSE step-by-step, an introduction to ThoughtSpot Everywhere. This is a self-guided course with related video content. Each section is broken down into a concrete topic along with instructions on the steps to follow and code examples to let you work on the steps yourself.
 
-This content is currently being developed with new content coming approximately every two weeks. The content will also
-be updated as new functionality is released for TSE.
+If you would also like the video version, you can sign up for the free [ThoughtSpot U](https://training.thoughtspot.com/tse-step-by-step) course.  The videos cover the content with demonstrations.  
+
+[![ThoughtSpot U](images/tsu.png)](https://training.thoughtspot.com/tse-step-by-step)
+
 
 ## Requirements
 
-This course uses the latest version of ThoughtSpot Cloud and the visual embed SDK.
+This course was created using version 8.8.0.cl, so some features may have changed since then.  Please provide feedback in the discussion or issues.  You should be on a more recent version of ThoughtSpot for some of the features.
 
 ## Resources
 
@@ -41,4 +41,4 @@ Ideally you will have some experience with HTML and Javascript, but it's not req
 | [Lesson 9 - Code Helpers](lesson-09-code-helpers/README-09.md)                      | This lesson covers two Javascript files that can be used to help when making API calls and handling custom actions.                                                      |
 | [Lesson 10 - Custom Action](lesson-10-custom-action/README-10.md)                   | This lesson will show how to combine the visual embed SDK and custom actions to add new capabilities to ThoughtSpot.                                                     |
 | [Lesson 11 - Custom Chart](lesson-11-custom-charts/README-11.md)                    | This lesson uses the data API to get data and then render a custom chart using HighCharts.                                                                               |
-| [Lesson 12 - Summary and Next Steps](lesson-12-summary/README-12.md)                | In this lesson we wrap up the course with a few miscellaneous topics and some next steps.                                                                                |
+| [Lesson 12 - Summary and Next Steps](lesson-12-summary/README-12.md)                | In this lesson, we wrap up the course with a few miscellaneous topics and some next steps.                                                                               |
