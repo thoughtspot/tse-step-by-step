@@ -177,4 +177,4 @@ If you run into problems, you can look at the code in the `src` folder in this s
 * index.html
 * tse.js
 
-[< prev](../lesson-04-start-coding/README-04.md) | [next >](../lesson-06-embed-liveboard/README-06.md)
+[< prev](../lesson-04-start-coding/README-04.md) | [next >](../lesson-07-embed-liveboard/README-06.md)
