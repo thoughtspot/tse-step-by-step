@@ -13,6 +13,8 @@ services, and the ability to push TS data to other applications.
 
 ![Embedding options with TSE](images/tse-options.png "TSE Options")
 
+Note that in this course, we will only be embedding with the Visual Embed SDK.
+
 ThoughtSpot Embedded has the following benefits:
 
 * Provide more than static dashboards with the full power of ThoughtSpot - users are able to ask natural language
@@ -35,8 +37,7 @@ ThoughtSpot Embedded has the following benefits:
 There are two important roles to understand when developing with ThoughtSpot Embedded. The first role is the _
 _Developer__, who has access to the Developer's portal in the UI. This portal provides documentation, settings, and
 Playgrounds for generating visual embed code and REST API calls. The Developer's portal and SDK is what makes it so easy
-to work with
-ThoughtSpot Embedded.
+to work with ThoughtSpot Embedded.
 
 The __Admin__ role, has the same privileges as the Developer, but can also modify security settings and create users and
 groups. Typically, most developers will have the Developer role and will work with an administrator to set up security.
