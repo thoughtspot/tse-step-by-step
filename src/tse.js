@@ -2,6 +2,11 @@
 import {
   init,
   AuthType,
+  SearchEmbed,
+  LiveboardEmbed,
+  AppEmbed,
+  Page,
+  Action,
 } from "https://unpkg.com/@thoughtspot/visual-embed-sdk/dist/tsembed.es.js";
 
 // 1) - Set the tsURL to point to your ThoughtSpot instance.
@@ -15,8 +20,6 @@ const loadApp = () => {
 
 // ===============================================================================================
 // Events for nav bar.  As you add functionality, you'll need to connect the UI to functions. 
-
-
 // Copy the following and change the id to the ID from the HTML document and the handler to be the function to call.
 // document.getElementById('element-id').addEventListener('click', eventHandler);
 
