@@ -57,11 +57,13 @@ The image above has three main sections:
 
 ## Download the code
 
-Before beginning, you should download the code from GitHub. The recommended approach is to use
-the [`git clone`](https://github.com/git-guides/git-clone) command to make a local copy, perhaps
+Before beginning, you should download the code from [GitHub](https://github.com/thoughtspot/tse-step-by-step/). The
+recommended approach is to use the [`git clone`](https://github.com/git-guides/git-clone) command to make a local copy, perhaps
 after [forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the code base. If you don't want to take
 this route (or don't know what those commands are), then you can also just download the code using the Download Zip
 option as shown in the image below.
+
+`git clone https://github.com/thoughtspot/tse-step-by-step/`
 
 ![Download from GitHub](images/download-git.png)
 
