@@ -5,7 +5,7 @@ In this lesson we'll embed the ThoughtSpot application.  In this case, we'll be 
 
 ## Pre-Conditions
 
-It's ideal if you've done all the lessons so far.  You minimally will need to have set up the environment and code and have an `init` method working (see [lesson 06](../lesson-07-embed-liveboard/README-06.md)).
+It's ideal if you've done all the lessons so far.  You minimally will need to have set up the environment and code and have an `init` method working (see [lesson 06](../lesson-07-embed-liveboard/README-07)).
 
 ## Add a nav link and function for the full app
 
@@ -131,4 +131,4 @@ If you run into problems, you can look at the code in the `src` folder in this s
 * index.html
 * tse.js
 
-[< prev](../lesson-07-embed-liveboard/README-06.md) | [next >](../lesson-05-embed-search/README-05.md)
+[< prev](../lesson-07-embed-liveboard/README-07) | [next >](../lesson-05-embed-search/README-05.md)
