@@ -1,12 +1,13 @@
 /** Logic for embedding and controlling the application. */
 import {
   init,
-  AuthType,
-  SearchEmbed,
-  LiveboardEmbed,
-  AppEmbed,
-  Page,
   Action,
+  AppEmbed,
+  AuthType,
+  LiveboardEmbed,
+  Page,
+  SageEmbed,
+  SearchEmbed,
 } from "https://unpkg.com/@thoughtspot/visual-embed-sdk/dist/tsembed.es.js";
 
 // 1) - Set the tsURL to point to your ThoughtSpot instance.
