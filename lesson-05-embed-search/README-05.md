@@ -1,4 +1,4 @@
-# Lesson 5 - Init and Embed Search
+# Lesson 5 - Init and Embed Token Search
 
 At this point we are ready to start embedding ThoughtSpot content. In this lesson we'll initialize the SDK and embed a
 search page. To make it quick and easy, we'll use the developer's playground to generate the code and then update our
