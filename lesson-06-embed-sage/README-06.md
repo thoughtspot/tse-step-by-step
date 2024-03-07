@@ -1,5 +1,9 @@
 # Lesson 6 - Embed Natural Language Search
 
+Now that you've already embedded a search, you will that the rest of the embedding follows the same basic pattern:
+* Create the component in the playground
+* Add the component to your code and render
+ 
 In this lesson we'll be adding Natural Language Search (also known as Sage) to the embedded application. This is a newer
 feature that was added in version 9.8.
 
