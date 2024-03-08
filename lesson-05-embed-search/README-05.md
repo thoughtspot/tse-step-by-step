@@ -1,8 +1,9 @@
-# Lesson 5 - Init and Embed Token Search
+# Lesson 5 - Init and Embed Search
 
 At this point we are ready to start embedding ThoughtSpot content. In this lesson we'll initialize the SDK and embed a
 search page. To make it quick and easy, we'll use the developer's playground to generate the code and then update our
-HTML and JS files to use the generated code.
+HTML and JS files to use the generated code. This is the longest lesson in the tutorial, but once you have completed it,
+you should have an understanding of how to embed the remaining objects.
 
 ## Pre-Conditions
 
@@ -227,7 +228,7 @@ Search link, and you should see something like the following:
 
 You will likely notice that the search takes a long time to render. The initial rendering will re-download the
 ThoughtSpot content from ThoughtSpot. This delay can be significantly sped up by using `callPrefetch: true` in
-the `init` method. If you have caching disabled it will always re-download.  Prefetch and caching will speed this up.
+the `init` method. If you have caching disabled it will always re-download. Prefetch and caching will speed this up.
 
 ## Activities
 
