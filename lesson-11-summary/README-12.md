@@ -43,7 +43,7 @@ In this course we covered a few API calls, mainly to retrieve data.  But Thought
 
 ## CS Tools
 
-[CS Tools](https://thoughtspot.github.io/cs_tools) is not technically part of ThoughtSpot Everywhere.  But it's useful enough to mention here.  CS Tools is a community supported set of open source tools that allow you to do things like extract usage information, automate TML activities, and more easily manage users, etc.  See the [list of tools](https://thoughtspot.github.io/cs_tools/cs-tools/overview/) for the current capabilities.  And if you are interested, you can even contribute ideas and code.  
+[CS Tools](https://thoughtspot.github.io/cs_tools) is not technically part of ThoughtSpot Embedded.  But it's useful enough to mention here.  CS Tools is a community supported set of open source tools that allow you to do things like extract usage information, automate TML activities, and more easily manage users, etc.  See the [list of tools](https://thoughtspot.github.io/cs_tools/cs-tools/overview/) for the current capabilities.  And if you are interested, you can even contribute ideas and code.  
 
 ![CS Tools](images/cstools.png)
 
