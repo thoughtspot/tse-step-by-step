@@ -103,4 +103,4 @@ details.
 
 * None
 
-[< prev](../lesson-09-embed-full-app/README-09.md) | [> next](../lesson-11-summary/README-11.md)
+[< prev](../lesson-09-embed-full-app/README-09.md) | [next >](../lesson-11-summary/README-11.md)
